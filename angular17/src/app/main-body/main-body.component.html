@@ -1,0 +1,18 @@
+<div>
+    <label>Search: </label>
+    <input type="text" name="search" [(ngModel)]="searchString" (input)="callDebounce()" placeholder="Search...."/>
+    <label>List of data</label>
+    <div>
+        @for(d of backupData; track d){
+            <div>{{d}}</div>
+        }
+    </div>
+    <button type="button" (click)="increase()">Increase</button>
+    <button type="button" (click)="print()">print</button>
+    <!-- <input type="radio" name="rad" value="a" (change)="showDiv('a')"/>Radio A
+    <input type="radio" name="rad" value="b" (change)="showDiv('b')"/>Radio B
+    <div [ngClass]="{red: isRadioA=='a', yellow: isRadioA=='b'}">
+        {{isRadioA=='a'?'Radio A': 'RadioB'}}
+    </div>
+    <p>{{message | customPipe}}</p> -->
+</div>
