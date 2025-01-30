@@ -22,12 +22,25 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 22
+          
+      - name: Go to Angular Folder
+        run: cd angular17
+        
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Build project
+      - name: Build angular
         run: npm run build
 
+      - name: Go to Node Folder
+        run: cd node-server
+        
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Build angular
+        run: npm run build
+        
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
