@@ -24,9 +24,7 @@ jobs:
           node-version: 22
           
       - name: Setup Angular
-        uses: npm install -g @angular/cli
-        with:
-          node-version: 17
+        run: npm install -g @angular/cli@17
           
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
