@@ -26,6 +26,9 @@ jobs:
       - name: Go to Angular Folder
         run: cd angular17
         
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli@17
+        
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
